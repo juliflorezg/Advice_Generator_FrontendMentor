@@ -21,7 +21,6 @@ const AdviceCard = styled.article`
   padding-right: 30px;
   margin-inline: auto;
   background-color: hsl(217, 19%, 24%);
-  color: salmon;
   border-radius: 10px;
 `
 const Title = styled.h3`
@@ -35,8 +34,6 @@ const Title = styled.h3`
 const Text = styled.p`
   margin-bottom: 1.25rem;
   font-size: 1.75rem;
-  /* letter-spacing: 2px; */
-  /* text-transform: uppercase; */
   color: hsl(193, 38%, 86%);
   font-weight: 800;
 `
@@ -74,11 +71,8 @@ const DiceContainer = styled.div`
   }
 `
 
-//
-
 export default function Advice({ title, text, isLoading, petitionHandler }) {
   const [showButton, setShowButton] = useState(false)
-  // const [clicks, setClicks] = useState(0)
 
   useEffect(() => {
     setTimeout(() => {
@@ -86,7 +80,6 @@ export default function Advice({ title, text, isLoading, petitionHandler }) {
     }, 3000)
   })
 
-  console.log({ showButton })
 
   const diceClickHandler = () => {
     setShowButton(() => false)
