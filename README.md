@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://www.frontendmentor.io/profile/juliflorezg)
+- Solution URL: (https://www.frontendmentor.io/solutions/advice-generator-app-with-react-and-styled-components-TN517RffVj)
 - Live Site URL: (https://advice-generator-edc15.web.app/)
 
 ## My process
