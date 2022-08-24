@@ -9,16 +9,24 @@ function App() {
   const [makePetition, setMakePetition] = useState(false)
 
   useEffect(() => {
+    setIsLoading(() => true)
+
     const getAdvice = async () => {
-      setIsLoading(true)
-      const response = await fetch('https://api.adviceslip.com/advice')
+      const randomID = Math.ceil(Math.random() * 220)
+      const response = await fetch(
+        `https://api.adviceslip.com/advice/${randomID}`
+      )
       const data = await response.json()
+
+      if (!data.slip) {
+        getAdvice()
+      }
 
       setAdviceId(data.slip.id)
       setAdviceText(data.slip.advice)
       setIsLoading(false)
     }
-
+    
     getAdvice()
   }, [makePetition])
 
